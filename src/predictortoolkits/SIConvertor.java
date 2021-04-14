@@ -231,11 +231,11 @@ public class SIConvertor extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Done!");
             String[] coords = txtCoordinatesPath.getText().split("\\\\");
             String path = "";
-            for (int i = 0; i < coords.length-1; i++){
+            for (int i = 0; i < coords.length - 1; i++) {
                 path = path + coords[i] + "\\";
             }
             File file = new File(path);
-            
+
             try {
                 Desktop.getDesktop().open(file);
             } catch (IOException ex) {
