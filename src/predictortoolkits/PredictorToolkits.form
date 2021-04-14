@@ -67,6 +67,11 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JButton" name="btnEProfile">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Icons/Chemdraw48.png"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEProfileActionPerformed"/>
           </Events>
@@ -77,6 +82,11 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JButton" name="btnRedoxPotential">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Icons/RedoxPotential.png"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRedoxPotentialActionPerformed"/>
           </Events>
@@ -87,6 +97,11 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JButton" name="btnSelectivityCalculator">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Icons/Selectivity.png"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSelectivityCalculatorActionPerformed"/>
           </Events>
@@ -97,6 +112,11 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JButton" name="btnSIConvertor1">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Icons/SI_Convertor.png"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSIConvertor1ActionPerformed"/>
           </Events>

@@ -46,6 +46,7 @@ public class PredictorToolkits extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnEProfile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Chemdraw48.png"))); // NOI18N
         btnEProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEProfileActionPerformed(evt);
@@ -53,6 +54,7 @@ public class PredictorToolkits extends javax.swing.JFrame {
         });
         jPanel1.add(btnEProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 50, 50));
 
+        btnRedoxPotential.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/RedoxPotential.png"))); // NOI18N
         btnRedoxPotential.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRedoxPotentialActionPerformed(evt);
@@ -60,6 +62,7 @@ public class PredictorToolkits extends javax.swing.JFrame {
         });
         jPanel1.add(btnRedoxPotential, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 50, 50));
 
+        btnSelectivityCalculator.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Selectivity.png"))); // NOI18N
         btnSelectivityCalculator.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSelectivityCalculatorActionPerformed(evt);
@@ -67,6 +70,7 @@ public class PredictorToolkits extends javax.swing.JFrame {
         });
         jPanel1.add(btnSelectivityCalculator, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 50, 50));
 
+        btnSIConvertor1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/SI_Convertor.png"))); // NOI18N
         btnSIConvertor1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSIConvertor1ActionPerformed(evt);
