@@ -48,8 +48,6 @@ public class SIConvertor extends javax.swing.JFrame {
 
         jScrollPane3 = new javax.swing.JScrollPane();
         textAreatoConvert = new javax.swing.JTextArea();
-        jLabel3 = new javax.swing.JLabel();
-        comboboxProgram = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         txtRootPath = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
@@ -68,10 +66,6 @@ public class SIConvertor extends javax.swing.JFrame {
         textAreatoConvert.setColumns(20);
         textAreatoConvert.setRows(5);
         jScrollPane3.setViewportView(textAreatoConvert);
-
-        jLabel3.setText("Program used:");
-
-        comboboxProgram.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gaussian", "Jaguar", "QChem", "ORCA" }));
 
         jLabel1.setText("Root path:");
 
@@ -113,13 +107,9 @@ public class SIConvertor extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane3)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(comboboxProgram, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtRootPath)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtRootPath, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
@@ -127,7 +117,7 @@ public class SIConvertor extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtFrequenciesPath, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE))
+                                .addComponent(txtFrequenciesPath))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -146,8 +136,6 @@ public class SIConvertor extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(267, 267, 267)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(comboboxProgram, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
                     .addComponent(txtRootPath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
@@ -212,23 +200,26 @@ public class SIConvertor extends javax.swing.JFrame {
                 if (new File(txtCoordinatesPath.getText()).exists()){
                     
                 }
+                String prog = "";
+                prog = classify(CalcPath, CalcID);
                 
                 
-                if (comboboxProgram.getSelectedObjects()[0].toString().equals("Jaguar")) {
+                
+                if (prog.equals("jag")) {
                     SI_Jaguar(CalcPath, CalcID, SI_Name);
-                } else if (comboboxProgram.getSelectedObjects()[0].toString().equals("QChem")) {
+                } else if (prog.equals("qchem")) {
                     try {
                         SI_QChem(CalcPath, CalcID, SI_Name);
                     } catch (IOException ex) {
                         Logger.getLogger(SIConvertor.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } else if (comboboxProgram.getSelectedObjects()[0].toString().equals("Gaussian")) {
+                } else if (prog.equals("gaussian")) {
                     try {
                         SI_Gaussian(CalcPath, CalcID, SI_Name);
                     } catch (IOException ex) {
                         Logger.getLogger(SIConvertor.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } else if (comboboxProgram.getSelectedObjects()[0].toString().equals("ORCA")) {
+                } else if (prog.equals("orca")) {
                     try {
                         SI_ORCA(CalcPath, CalcID, SI_Name);
                     } catch (IOException ex) {
@@ -244,7 +235,7 @@ public class SIConvertor extends javax.swing.JFrame {
                 path = path + coords[i] + "\\";
             }
             File file = new File(path);
-            JOptionPane.showMessageDialog(null, path);
+            
             try {
                 Desktop.getDesktop().open(file);
             } catch (IOException ex) {
@@ -267,10 +258,8 @@ public class SIConvertor extends javax.swing.JFrame {
     private static Connection conn = null;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnConvert;
-    private static javax.swing.JComboBox<String> comboboxProgram;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane3;
@@ -282,6 +271,36 @@ public class SIConvertor extends javax.swing.JFrame {
     private javax.swing.JTextField txtRootPath;
     // End of variables declaration//GEN-END:variables
 
+    private static String classify(String CalcPath, String CalcID){
+        try {
+            BufferedReader file_out = new BufferedReader(new FileReader(CalcPath + "\\" + CalcID + ".out"));
+            boolean prog_determined = false;
+            String line = file_out.readLine();
+            
+            
+            while (!prog_determined) {
+                if (line.contains("Jaguar version ")) { // 5th line has Jaguar Version
+                    return "jag";
+                    
+                } else if (line.contains("Q-Chem version") || line.contains("qchem")) { // 1st line
+                    return "qchem";
+
+                } else if (line.contains("Entering Gaussian System,")) { // 1st line
+                    return "gaussian";
+
+                } else if (line.contains("O   R   C   A")) {
+                    return "orca";
+
+                }
+                line = file_out.readLine();
+            }
+            
+        } catch (IOException ex) {
+            
+        }
+        return "jag";
+    }
+    
     private static void SI_Jaguar(String CalcPath, String CalcID, String SI_Name) {
         try {
             File coord = new File(txtCoordinatesPath.getText());
@@ -553,8 +572,8 @@ public class SIConvertor extends javax.swing.JFrame {
             for (int k = 0; k < 4; k++) {
                 xyzfromline.add(geometry.get(j).trim().split("\\s+")[k]);
             }
-            file_Coord.println(String.format("%3s %14.9f%14.9f%14.9f ", xyzfromline.get(0), Double.parseDouble(xyzfromline.get(1)), Double.parseDouble(xyzfromline.get(2)), Double.parseDouble(xyzfromline.get(3))));
-            file_Coord_xyz.println(String.format("%3s %14.9f%14.9f%14.9f", xyzfromline.get(0), Double.parseDouble(xyzfromline.get(1)), Double.parseDouble(xyzfromline.get(2)), Double.parseDouble(xyzfromline.get(3))));
+            file_Coord.println(String.format("%3s %14.6f%14.6f%14.6f ", xyzfromline.get(0), Double.parseDouble(xyzfromline.get(1)), Double.parseDouble(xyzfromline.get(2)), Double.parseDouble(xyzfromline.get(3))));
+            file_Coord_xyz.println(String.format("%3s %14.6f%14.6f%14.6f", xyzfromline.get(0), Double.parseDouble(xyzfromline.get(1)), Double.parseDouble(xyzfromline.get(2)), Double.parseDouble(xyzfromline.get(3))));
             xyzfromline.clear();
         }
 
