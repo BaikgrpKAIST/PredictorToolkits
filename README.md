@@ -6,4 +6,4 @@
 
 **3. SI Exporter**
 
-**4. Energy Plotter**
+**4. Energy Profile Plotter**
