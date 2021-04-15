@@ -462,7 +462,7 @@ public class EProfilePlotter extends javax.swing.JFrame {
 
     private void btnInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, " Initial code by Dr. Florian Mulks & Dr. Jinhoon Jeong\n Modified & Iimplemented by Mina Son @ Baikgroup KAIST");
+        JOptionPane.showMessageDialog(null, " Initial code by Dr. Florian Mulks & Dr. Jinhoon Jeong\n Modified & Implemented by Mina Son @ Baikgroup KAIST");
     }//GEN-LAST:event_btnInfoActionPerformed
 
     private void ComboBoxColumnSizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBoxColumnSizeActionPerformed
