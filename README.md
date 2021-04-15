@@ -21,4 +21,4 @@ Then, it generates a single text file and xyz file.
 Energy profile plotter provides the automatic generation of energy profiles editable in ChemDraw.
 
 Energy profile plotter was originally developed by Dr. Florian Mulks using Google colab (dGogh).
-Then, it was rewritten in Java by Dr. Jinhoon Jeong and implemented into PredictorToolkits by Mina Son & Hoimin Jung.
+Then, it was rewritten in Python by Dr. Jinhoon Jeong and implemented into PredictorToolkits (Java) by Mina Son & Hoimin Jung.
