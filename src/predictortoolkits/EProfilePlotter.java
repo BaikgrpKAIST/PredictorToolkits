@@ -400,7 +400,7 @@ public class EProfilePlotter extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("[Instruction]\n1. Default labeling\nex) 0 10 -5 ....\n-> Type energy sequence in a row to generate an energy profile with default labeling (1, 1-TS, 2, 2-TS,...)\n\n2. User defined labeling: (label energy)\nex) (int1 0) (TS1 10) (int2 -5) (int3 -2.5) ...\n-> Type energy sequence as a matrix form to generate an energy profile with user defined labeling.\n\n3. To generate multiple energy profiles in a single sheet, please make a blank line between multiple energy sequencies.\nex)\n0 10 -5 ...\n0 8 -2 ...\nor\n(A 0) (A-TS1 5) (B -5) ...\n(A 0) (A-TS2 10) (C 3) ...\n");
+        jTextArea1.setText("[Instruction]\nPlease write down an energy sequence in a row. Then, click \"Generate\" button.\nEx) 0 10 -5 ....\n\nTo generate multiple energy profiles in a single sheet, please make a blank line between each energy sequence.\nex)\n0 10 -5 -2 -10 ...\n0 8 -2 12 5 ...\n0 15 -7 8 2 ...");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane2.setViewportView(jTextArea1);
@@ -431,8 +431,8 @@ public class EProfilePlotter extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnGenerate)

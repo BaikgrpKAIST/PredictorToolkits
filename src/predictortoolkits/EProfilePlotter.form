@@ -55,9 +55,9 @@
           <Group type="102" attributes="0">
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Component id="jScrollPane2" pref="230" max="32767" attributes="0"/>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane2" min="-2" pref="226" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jScrollPane1" pref="204" max="32767" attributes="0"/>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="btnGenerate" min="-2" max="-2" attributes="0"/>
@@ -295,7 +295,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="[Instruction]&#xa;1. Default labeling&#xa;ex) 0 10 -5 ....&#xa;-&gt; Type energy sequence in a row to generate an energy profile with default labeling (1, 1-TS, 2, 2-TS,...)&#xa;&#xa;2. User defined labeling: (label energy)&#xa;ex) (int1 0) (TS1 10) (int2 -5) (int3 -2.5) ...&#xa;-&gt; Type energy sequence as a matrix form to generate an energy profile with user defined labeling.&#xa;&#xa;3. To generate multiple energy profiles in a single sheet, please make a blank line between multiple energy sequencies.&#xa;ex)&#xa;0 10 -5 ...&#xa;0 8 -2 ...&#xa;or&#xa;(A 0) (A-TS1 5) (B -5) ...&#xa;(A 0) (A-TS2 10) (C 3) ...&#xa;"/>
+            <Property name="text" type="java.lang.String" value="[Instruction]&#xa;Please write down an energy sequence in a row. Then, click &quot;Generate&quot; button.&#xa;Ex) 0 10 -5 ....&#xa;&#xa;To generate multiple energy profiles in a single sheet, please make a blank line between each energy sequence.&#xa;ex)&#xa;0 10 -5 -2 -10 ...&#xa;0 8 -2 12 5 ...&#xa;0 15 -7 8 2 ..."/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Default Cursor"/>
