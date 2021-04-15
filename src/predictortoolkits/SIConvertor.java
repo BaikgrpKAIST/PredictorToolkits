@@ -80,6 +80,7 @@ public class SIConvertor extends javax.swing.JFrame {
         textAreaInstruction.setLineWrap(true);
         textAreaInstruction.setRows(5);
         textAreaInstruction.setText("[SI Exporter Instruction]\nThis utility reads output files from Gaussian, Jaguar, ORCA and QChem to export XYZ coordinates and frequencies into text files.\nPlease indicate the program that you have used for the computation, write down the root file path that contains files or folders of your  data.\nWrite down your calculation ID and SI-label to the text area, and click convert.\n\n*Root path should be a common folder that contains your computational output files or folders.\n\nFormat)\n[output file name] [Label]\nHJ_HWK010V Rh-1a\nHJ_HWK011V Rh-2a");
+        textAreaInstruction.setWrapStyleWord(true);
         textAreaInstruction.setFocusable(false);
         jScrollPane4.setViewportView(textAreaInstruction);
 

@@ -148,6 +148,7 @@
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
             <Property name="text" type="java.lang.String" value="[SI Exporter Instruction]&#xa;This utility reads output files from Gaussian, Jaguar, ORCA and QChem to export XYZ coordinates and frequencies into text files.&#xa;Please indicate the program that you have used for the computation, write down the root file path that contains files or folders of your  data.&#xa;Write down your calculation ID and SI-label to the text area, and click convert.&#xa;&#xa;*Root path should be a common folder that contains your computational output files or folders.&#xa;&#xa;Format)&#xa;[output file name] [Label]&#xa;HJ_HWK010V Rh-1a&#xa;HJ_HWK011V Rh-2a"/>
+            <Property name="wrapStyleWord" type="boolean" value="true"/>
             <Property name="focusable" type="boolean" value="false"/>
           </Properties>
         </Component>
