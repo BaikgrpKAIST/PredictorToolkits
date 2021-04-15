@@ -207,7 +207,7 @@ public class RedoxPotCalculator extends javax.swing.JFrame {
                 }else if(RefElectrode.getSelectedObjects()[0].equals("SCE")){
                     txtRedoxPot.setText(String.format("%.3f", G_Sol*(-1)-SHE-0.2412));
                 }else if(RefElectrode.getSelectedObjects()[0].equals("Fc/Fc+")){
-                    txtRedoxPot.setText(String.format("%.3f", G_Sol*(-1)-SHE-0.721));
+                    txtRedoxPot.setText(String.format("%.3f", G_Sol*(-1)-SHE-0.460));
                 }else if(RefElectrode.getSelectedObjects()[0].equals("Ag/AgCl")){
                     txtRedoxPot.setText(String.format("%.3f", G_Sol*(-1)-SHE-0.197));
                 }else if(RefElectrode.getSelectedObjects()[0].equals("Ag/AgNO3")){
