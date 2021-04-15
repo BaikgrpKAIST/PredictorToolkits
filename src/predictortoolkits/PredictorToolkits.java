@@ -44,7 +44,6 @@ public class PredictorToolkits extends javax.swing.JFrame {
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnEProfile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Chemdraw48.png"))); // NOI18N
         btnEProfile.addActionListener(new java.awt.event.ActionListener() {
@@ -52,7 +51,6 @@ public class PredictorToolkits extends javax.swing.JFrame {
                 btnEProfileActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 50, 50));
 
         btnRedoxPotential.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/RedoxPotential.png"))); // NOI18N
         btnRedoxPotential.addActionListener(new java.awt.event.ActionListener() {
@@ -60,7 +58,6 @@ public class PredictorToolkits extends javax.swing.JFrame {
                 btnRedoxPotentialActionPerformed(evt);
             }
         });
-        jPanel1.add(btnRedoxPotential, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 50, 50));
 
         btnSelectivityCalculator.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Selectivity.png"))); // NOI18N
         btnSelectivityCalculator.addActionListener(new java.awt.event.ActionListener() {
@@ -68,7 +65,6 @@ public class PredictorToolkits extends javax.swing.JFrame {
                 btnSelectivityCalculatorActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSelectivityCalculator, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 50, 50));
 
         btnSIConvertor1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/SI_Convertor.png"))); // NOI18N
         btnSIConvertor1.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +72,32 @@ public class PredictorToolkits extends javax.swing.JFrame {
                 btnSIConvertor1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSIConvertor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 50, 50));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(btnSelectivityCalculator, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(btnRedoxPotential, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(btnSIConvertor1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(btnEProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSelectivityCalculator, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRedoxPotential, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSIConvertor1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnEProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         jLabel1.setFont(new java.awt.Font("Candara", 0, 36)); // NOI18N
         jLabel1.setText("Predictor Toolkits");
@@ -100,7 +121,8 @@ public class PredictorToolkits extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         pack();
