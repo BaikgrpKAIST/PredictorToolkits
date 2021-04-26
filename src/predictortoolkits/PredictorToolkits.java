@@ -45,7 +45,7 @@ public class PredictorToolkits extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
-        btnEProfile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Chemdraw48.png"))); // NOI18N
+        btnEProfile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/EProfile48.png"))); // NOI18N
         btnEProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEProfileActionPerformed(evt);
