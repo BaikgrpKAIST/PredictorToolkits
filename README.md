@@ -22,3 +22,6 @@ Energy profile plotter provides the automatic generation of energy profiles edit
 
 Energy profile plotter was originally developed by Dr. Florian Mulks using Python in Google colab (dGogh).
 It was adapted in Python by Dr. Jinhoon Jeong and implemented into PredictorToolkits (Java) by Mina Son & Hoimin Jung.
+
+Java 14.0 is required for running the distribution. It can be downloaded here (after registering with Oracle):
+https://www.oracle.com/java/technologies/javase/jdk14-archive-downloads.html
